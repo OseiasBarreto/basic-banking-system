@@ -4,15 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6a6e7f9d-1fa3-4bc3-bd5a-e4e08cadcb34" name="Changes" comment="Corrigi erro de duplicação no método buscarConta e adicionei validação ao adicionar contas">
-      <change afterPath="$PROJECT_DIR$/src/Banco.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ContaBancaria.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Main.class" afterDir="false" />
+    <list default="true" id="6a6e7f9d-1fa3-4bc3-bd5a-e4e08cadcb34" name="Changes" comment="Adicionei novas funcionalidades e saídas de erros.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Banco.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Banco.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ContaBancaria.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ContaBancaria.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -78,11 +71,23 @@
     </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="basic-banking-system&#10;&#10;Simulador de conta bancária com operações e validações em Java" />
     <MESSAGE value="criar classe ContaBancaria&#10;&#10;&#10;Simulador de conta bancária com operações e validações em Java" />
     <MESSAGE value="Finalizei a classe ContaBancaria" />
     <MESSAGE value="Corrigi erro de duplicação no método buscarConta e adicionei validação ao adicionar contas" />
-    <option name="LAST_COMMIT_MESSAGE" value="Corrigi erro de duplicação no método buscarConta e adicionei validação ao adicionar contas" />
+    <MESSAGE value="Adicionei novas funcionalidades e saídas de erros." />
+    <option name="LAST_COMMIT_MESSAGE" value="Adicionei novas funcionalidades e saídas de erros." />
   </component>
 </project>
