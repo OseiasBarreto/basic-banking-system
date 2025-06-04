@@ -2,15 +2,30 @@ public class Main {
     public static void main(String[] args) {
         Banco banco = new Banco();
 
-        ContaBancaria joao = new ContaBancaria("João", "12345678904", "02/06/1990");
-        ContaBancaria maria = new ContaBancaria("Maria", "98765432102", "05/06/1995");
+        ContaBancaria c1 = new ContaBancaria("Mariana", "00000000001", "22/02/2001");
+        ContaBancaria c2 = new ContaBancaria("Rodolfo", "00000000002", "08/10/2000");
 
-        banco.adicionarConta(joao);
-        banco.adicionarConta(maria);
+        banco.adicionarConta(c1);
+        banco.adicionarConta(c2);
 
-        joao.depositar(500);
-        joao.transferir(maria, 235);
+        c1.depositar(2000);
+        c1.transferir(c2,500);
+        c2.transferir(c1,400);
+        c1.sacar(1900);
+        c1.encerrarConta();
+
 
         banco.listarContas();
+
+        System.out.println(c1.toString());
+        System.out.println(c2.toString());
+
+
+
+
+
+
+
+
     }
 }

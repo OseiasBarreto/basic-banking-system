@@ -12,11 +12,18 @@ public class Banco {
     }
     //mtd add nova conta
     public boolean adicionarConta(ContaBancaria novaConta) {
+        String cpf = novaConta.getCpf();
+        if(!cpf.matches("\\d{11}")){
+            System.out.println("CPF inválido. Deve conter 11 números.");
+            return false;
+        }
+
         if (buscarConta(novaConta.getCpf()) != null) {
             System.out.println("CPF já cadastrado.");
             return false;
         }
         contas.add(novaConta);
+        System.out.println("Conta adicionada com sucesso.");
         return true;
     }
     //mtd listar contas existentes
@@ -29,11 +36,11 @@ public class Banco {
         for (ContaBancaria conta : contas){
             System.out.println(
                     "Nome: " + conta.getNome() +
-                    " | CPF: ***." + conta.getCpf().substring(9) +
+                    " | CPF: ***-" + conta.getCpf().substring(9) +
                     " | Saldo: R$ " + conta.getSaldo()
             );
     }
-        System.out.println("Total: " + contas.size() + "contas\n");
+        System.out.println("Total: " + contas.size() + " contas\n");
 }
 //Metodo para buscar conta por CPF usando o for-each para list
 public ContaBancaria buscarConta(String cpf) {
