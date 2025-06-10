@@ -7,18 +7,21 @@ import java.util.Locale;
 public class ContaBancaria {
     private final String nome;
     private final LocalDate dataNascimento;
+    private String senha;
     private final String cpf;
     private double saldo;
     private boolean ativo;
     private boolean jaDepositou;
 
+
     //-------------------------------------------------------------------------------------------------------------------
     //Aqui é o construtor, onde irá criar e inicializar um objeto ao usar o "new..."
-    public ContaBancaria(String nome, String cpf, String dataNascimentoStr) {
+    public ContaBancaria(String nome, String cpf, String dataNascimentoStr, String senha) {
         this.nome = nome;
         this.cpf = cpf;
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy");
         this.dataNascimento = LocalDate.parse(dataNascimentoStr, formatter);
+        this.senha = senha;
 
         int idade = Period.between(dataNascimento, LocalDate.now()).getYears();
         this.ativo = calcularIdade() >= 18;
@@ -29,6 +32,11 @@ public class ContaBancaria {
     public String getNome() {
         return this.nome;
     }
+
+    public boolean validarSenha(String senhaTentativa){
+        return this.senha.equals(senhaTentativa);
+    }
+
 
     public String getCpf() {
         return this.cpf;

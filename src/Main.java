@@ -2,8 +2,8 @@ public class Main {
     public static void main(String[] args) {
         Banco banco = new Banco();
 
-        ContaBancaria c1 = new ContaBancaria("Mariana", "00000000001", "22/02/2001");
-        ContaBancaria c2 = new ContaBancaria("Rodolfo", "00000000002", "08/10/2000");
+        ContaBancaria c1 = new ContaBancaria("Mariana", "00000000001", "22/02/2001", "000");
+        ContaBancaria c2 = new ContaBancaria("Rodolfo", "00000000002", "08/10/2000","000");
 
         banco.adicionarConta(c1);
         banco.adicionarConta(c2);

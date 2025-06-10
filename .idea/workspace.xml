@@ -4,8 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6a6e7f9d-1fa3-4bc3-bd5a-e4e08cadcb34" name="Changes" comment="Adicionei novas funcionalidades e saídas de erros.">
+    <list default="true" id="6a6e7f9d-1fa3-4bc3-bd5a-e4e08cadcb34" name="Changes" comment="adicionando README.md com descrição do projeto">
+      <change afterPath="$PROJECT_DIR$/src/Autenticar.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/User.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ContaBancaria.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ContaBancaria.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -88,6 +92,7 @@
     <MESSAGE value="Finalizei a classe ContaBancaria" />
     <MESSAGE value="Corrigi erro de duplicação no método buscarConta e adicionei validação ao adicionar contas" />
     <MESSAGE value="Adicionei novas funcionalidades e saídas de erros." />
-    <option name="LAST_COMMIT_MESSAGE" value="Adicionei novas funcionalidades e saídas de erros." />
+    <MESSAGE value="adicionando README.md com descrição do projeto" />
+    <option name="LAST_COMMIT_MESSAGE" value="adicionando README.md com descrição do projeto" />
   </component>
 </project>
