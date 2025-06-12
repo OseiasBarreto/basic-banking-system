@@ -103,7 +103,7 @@ System.out.println(c2.toString());
 
 ## ✍️ Autor
 
-- Desenvolvido por [Seu Nome Aqui]
+- Desenvolvido por [Oséias Barreto]
 
 ---
 
