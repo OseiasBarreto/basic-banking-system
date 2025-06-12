@@ -1,7 +1,7 @@
 public class User {
     private String nome;
-    private String login;
-    private String senha;
+    private final String login;
+    private  String senha;
     private TypeUser.TipoUsuario tipo;
 
 //construct
