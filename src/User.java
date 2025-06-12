@@ -1,16 +1,28 @@
 public class User {
-    private String cpf;
+    private String nome;
+    private String login;
     private String senha;
+    private TypeUser.TipoUsuario tipo;
 
-    public User(String cpf, String senha){
-        this.cpf = cpf;
+//construct
+    public User(String nome, String login, String senha, TypeUser.TipoUsuario tipo){
+        this.nome = nome;
+        this.login = login;
         this.senha = senha;
+        this.tipo = tipo;
     }
 
-    public String getCpf(){
-        return cpf;
+    //getters
+    public String getNome(){
+        return nome;
+    }
+    public String getLogin(){
+        return login;
     }
     public String getSenha(){
         return senha;
+    }
+    public TypeUser.TipoUsuario getTipo(){
+        return tipo;
     }
 }

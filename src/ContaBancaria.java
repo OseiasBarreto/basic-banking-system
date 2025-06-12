@@ -12,6 +12,7 @@ public class ContaBancaria {
     private double saldo;
     private boolean ativo;
     private boolean jaDepositou;
+    private boolean autenticado = false;
 
 
     //-------------------------------------------------------------------------------------------------------------------
@@ -43,7 +44,10 @@ public class ContaBancaria {
     }
 
     public double getSaldo() {
-        return this.saldo;
+        if (this.autenticado) {
+            return this.saldo;
+        }
+        throw new SecurityException("Acesso não autorizado ");
     }
 
     public boolean isAtiva() {
@@ -55,10 +59,13 @@ public class ContaBancaria {
     }
 
     //----------------------------------------------------------------------------------------------------------
-    /*Aqui é o metodo (ações) do programa e sua lógica
 
+    /*Aqui é o metodo (ações) do programa e sua lógica
     O metodo depositar adiciona saldo e permite saque ou transferencia apos o primeiro
     uso. Ele soma o valor ao saldo e faz com que o atributo JaDepositou seja true */
+
+
+
     public void depositar(double valor) {
         if (valor > 0) {
             saldo += valor;
@@ -121,6 +128,18 @@ public class ContaBancaria {
 
     private String formatarCpf() {
         return cpf.replaceAll("(\\d{3})(\\d{3})(\\d{3})(\\d{2})", "***.***.***-$4");
+    }
+
+    public boolean autenticar(String senhaTentativa){
+        if(this.senha.equals(senhaTentativa)) {
+            this.autenticado = true;
+            return true;
+        }
+        return false;
+    }
+
+    public void sair(){
+        this.autenticado = false;
     }
 
 
