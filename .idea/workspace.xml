@@ -4,8 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6a6e7f9d-1fa3-4bc3-bd5a-e4e08cadcb34" name="Changes" comment="Adicionado duas classes novas (UserService e TyperUser.java)">
+    <list default="true" id="6a6e7f9d-1fa3-4bc3-bd5a-e4e08cadcb34" name="Changes" comment="estrutura base do caixa eletrônico com contas, banco, usuários e armazenamento JSON">
+      <change afterPath="$PROJECT_DIR$/src/Menu.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/UserService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -92,6 +94,7 @@
     <MESSAGE value="adicionando README.md com descrição do projeto" />
     <MESSAGE value="Adicionado duas classes novas (User.java e Autenticar.java)" />
     <MESSAGE value="Adicionado duas classes novas (UserService e TyperUser.java)" />
-    <option name="LAST_COMMIT_MESSAGE" value="Adicionado duas classes novas (UserService e TyperUser.java)" />
+    <MESSAGE value="estrutura base do caixa eletrônico com contas, banco, usuários e armazenamento JSON" />
+    <option name="LAST_COMMIT_MESSAGE" value="estrutura base do caixa eletrônico com contas, banco, usuários e armazenamento JSON" />
   </component>
 </project>

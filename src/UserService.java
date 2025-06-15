@@ -49,6 +49,14 @@ public void cadastrarUsuario (User usuario){
     salvarUsuarios(); // atualiza o arquvi JSON
 
     }
+    public User autenticarUsuario(String login, String senha){
+        for(User user : usuarios){
+            if(user.getLogin().equals(login) && user.getSenha().equals(senha)){
+                return user;
+            }
+        }
+        return null;
+    }
 }
 
 
