@@ -36,6 +36,7 @@ public class Menu {
     private void menuAdmin(Scanner sc) {
         System.out.println("=== MENU ADMIN ===");
         banco.listarContas();
+
     }
 
     private void menuComum(Scanner sc, User user) {
@@ -45,6 +46,10 @@ public class Menu {
             System.out.println("Conta não encontrada para o CPF/Login informado.");
             return;
         }
+        if (!conta.autenticar(user.getSenha())){
+            System.out.println("Falha na autenticação da conta.");
+        }
+
         boolean continuar = true;
         while (continuar) {
             System.out.println("\n1 - Ver Saldo");
@@ -56,8 +61,8 @@ public class Menu {
             switch (op) {
                 case 1:
                     try {
-                        if (conta.autenticar(user.getSenha()))
-                            System.out.println("Saldo atual: R$ " + conta.getSaldo());
+                        double saldo = conta.getSaldo(false);
+                            System.out.printf("Saldo atual: R$ %.2f%n", saldo);
                     } catch (SecurityException e){
                         System.out.println(e.getMessage());
                     }

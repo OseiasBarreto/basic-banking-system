@@ -9,11 +9,12 @@ public class ContaBancaria {
     private final LocalDate dataNascimento;
     private String senha;
     private final String cpf;
-    private double saldo;
+    private double saldo = 0;
     private boolean ativo;
     private boolean jaDepositou;
     private boolean autenticado = false;
-
+    private String login;
+    private String titular;
 
     //-------------------------------------------------------------------------------------------------------------------
     //Aqui é o construtor, onde irá criar e inicializar um objeto ao usar o "new..."
@@ -43,8 +44,8 @@ public class ContaBancaria {
         return this.cpf;
     }
 
-    public double getSaldo() {
-        if (this.autenticado) {
+    public double getSaldo(boolean isAdmin) {
+        if (this.autenticado || isAdmin) {
             return this.saldo;
         }
         throw new SecurityException("Acesso não autorizado ");
@@ -128,6 +129,10 @@ public class ContaBancaria {
 
     private String formatarCpf() {
         return cpf.replaceAll("(\\d{3})(\\d{3})(\\d{3})(\\d{2})", "***.***.***-$4");
+    }
+
+    public double getSaldoSemAutenticacao(){
+        return this.saldo;
     }
 
     public boolean autenticar(String senhaTentativa){
