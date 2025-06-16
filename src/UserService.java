@@ -35,14 +35,22 @@ public class UserService {
     }
 
     //salva a lista atual de usuarios no arquivo JSON
-    private void salvarUsuarios(){
-        try (Writer writer = new FileWriter(caminhoArquivo)){
-            gson.toJson(usuarios, writer);
-        } catch (JsonIOException e) {
+    private void salvarUsuarios() {
+        try {
+            File file = new File(caminhoArquivo);
+
+            File parent  = file.getParentFile();//cria a pasta
+            if (parent != null){
+                parent.mkdirs();
+            }
+
+            try(Writer writer = new FileWriter(file)){
+                gson.toJson(usuarios, writer);
+            }
+        } catch (IOException | JsonIOException e) {
             System.out.println("Erro ao salvar usuários: " + e.getMessage());
         }
     }
-
 //add um novo usuario
 public void cadastrarUsuario (User usuario){
     usuarios.add(usuario);
