@@ -33,11 +33,11 @@ public class Menu {
         }
     }
 
-    private void menuAdmin(Scanner sc) {
-        System.out.println("=== MENU ADMIN ===");
-        banco.listarContas();
+        private void menuAdmin(Scanner sc) {
+            System.out.println("=== MENU ADMIN ===");
+            banco.listarContas();
 
-    }
+        }
 
     private void menuComum(Scanner sc, User user) {
         System.out.println("=== MENU USUÁRIO COMUM ===");
